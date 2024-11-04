@@ -1,7 +1,7 @@
 <?php
 include_once("../../configuracion.php");
 $tituloPagina = "Coffee store";
-//$sesionInicial = new Session();
+$sesionInicial = new Session();
 if ($sesionInicial->validar()) {
     include_once("../estructura/encabezadoPrivado.php");
 } else {

@@ -70,7 +70,8 @@ class Session
         $listaRoles = null;
         if ($this->validar()) {
             $objAbmUsuarioRol = new AbmUsuarioRol();
-            if ($listaUsuarioRol = $objAbmUsuarioRol->buscar(["idusuario" => $_SESSION['idusuario']])) {
+            $listaUsuarioRol = $objAbmUsuarioRol->buscar(["idusuario" => $_SESSION['idusuario']]);
+            if (is_array($listaUsuarioRol) || $listaUsuarioRol instanceof Countable) {
                 for ($i = 0; $i < count($listaUsuarioRol); $i++) {
                     $listaRoles[$i] = $listaUsuarioRol[$i]->getObjRol();
                 }
@@ -99,7 +100,7 @@ class Session
     public function establecerRolActivo($idrol)
     {
         $resp = false;
-        $roles = $this->getRol();
+        $roles = $this->getRol() ?? [];
         $i = 0;
         while ($i < count($roles) && !$resp) {
             if ($roles[$i]->getIdrol() == $idrol) {
