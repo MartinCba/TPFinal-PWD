@@ -1,3 +1,1 @@
-<?php
-    echo("hola");
-?>
+<script>location.href = "vista/paginas/inicio.php"</script>
