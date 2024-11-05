@@ -1,8 +1,6 @@
 <?php
-
 class Menu
 {
-
     private $idmenu;
     private $menombre;
     private $medescripcion;
@@ -10,6 +8,10 @@ class Menu
     private $medeshabilitado;
     private $mensajeoperacion;
 
+    /**
+     * Constructor de la clase Menu.
+     * Inicializa los atributos de la clase.
+     */
     public function __construct()
     {
         $this->idmenu = null;
@@ -20,6 +22,14 @@ class Menu
         $this->mensajeoperacion = "";
     }
 
+    /**
+     * Setea los atributos de la clase Menu.
+     * @param int $idmenuS
+     * @param string $menombreS
+     * @param string $medescripcionS
+     * @param Menu|null $objMenuS
+     * @param string|null $medeshabilitadoS
+     */
     public function setear($idmenuS, $menombreS, $medescripcionS, $objMenuS, $medeshabilitadoS)
     {
         $this->setIdmenu($idmenuS);
@@ -83,6 +93,10 @@ class Menu
         $this->mensajeoperacion = $nuevomensajeoperacion;
     }
 
+    /**
+     * Carga los datos de un menú desde la base de datos.
+     * @return boolean
+     */
     public function cargar()
     {
         $respuesta = false;
@@ -110,6 +124,10 @@ class Menu
         return $respuesta;
     }
 
+    /**
+     * Inserta un nuevo menú en la base de datos.
+     * @return boolean
+     */
     public function insertar()
     {
         $respuesta = false;
@@ -143,6 +161,10 @@ class Menu
         return $respuesta;
     }
 
+    /**
+     * Modifica un menú existente en la base de datos.
+     * @return boolean
+     */
     public function modificar()
     {
         $respuesta = false;
@@ -176,11 +198,14 @@ class Menu
         return $respuesta;
     }
 
+    /**
+     * Cambia el estado de habilitación de un menú.
+     * @return boolean
+     */
     public function cambiarEstado()
     {
         $respuesta = false;
         $this->cargar();
-        //date_default_timezone_set('America/Argentina/Cordoba');
         if ($this->getMedeshabilitado() == null) {
             $fechaBaja = date('Y-m-d H:i:s');
             $this->setMedeshabilitado($fechaBaja);
@@ -193,6 +218,11 @@ class Menu
         return $respuesta;
     }
 
+    /**
+     * Lista los menús de la base de datos que cumplen con el parámetro dado.
+     * @param string $parametro
+     * @return array
+     */
     public function listar($parametro = "")
     {
         $arreglo = array();

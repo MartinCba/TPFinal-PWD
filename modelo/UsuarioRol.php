@@ -2,11 +2,14 @@
 
 class UsuarioRol
 {
-
     private $objUsuario;
     private $objRol;
     private $mensajeoperacion;
 
+    /**
+     * Constructor de la clase UsuarioRol.
+     * Inicializa los atributos de la clase.
+     */
     public function __construct()
     {
         $this->objUsuario = new Usuario();
@@ -14,6 +17,11 @@ class UsuarioRol
         $this->mensajeoperacion = "";
     }
 
+    /**
+     * Setea los atributos de la clase UsuarioRol.
+     * @param Usuario $objUsuarioS
+     * @param Rol $objRolS
+     */
     public function setear($objUsuarioS, $objRolS)
     {
         $this->setObjUsuario($objUsuarioS);
@@ -47,6 +55,10 @@ class UsuarioRol
         $this->mensajeoperacion = $nuevomensajeoperacion;
     }
 
+    /**
+     * Carga los datos de un usuario-rol desde la base de datos.
+     * @return boolean
+     */
     public function cargar()
     {
         $respuesta = false;
@@ -73,6 +85,10 @@ class UsuarioRol
         return $respuesta;
     }
 
+    /**
+     * Inserta un nuevo usuario-rol en la base de datos.
+     * @return boolean
+     */
     public function insertar()
     {
         $resp = false;
@@ -92,6 +108,10 @@ class UsuarioRol
         return $resp;
     }
 
+    /**
+     * Modifica un usuario-rol existente en la base de datos.
+     * @return boolean
+     */
     public function modificar()
     {
         $respuesta = false;
@@ -111,6 +131,10 @@ class UsuarioRol
         return $respuesta;
     }
 
+    /**
+     * Elimina un usuario-rol de la base de datos.
+     * @return boolean
+     */
     public function eliminar()
     {
         $respuesta = false;
@@ -128,6 +152,11 @@ class UsuarioRol
         return $respuesta;
     }
 
+    /**
+     * Lista los usuario-rol de la base de datos que cumplen con el parámetro dado.
+     * @param string $parametro
+     * @return array
+     */
     public function listar($parametro = "")
     {
         $arreglo = array();

@@ -2,11 +2,14 @@
 
 class MenuRol
 {
-
     private $objMenu;
     private $objRol;
     private $mensajeoperacion;
 
+    /**
+     * Constructor de la clase MenuRol.
+     * Inicializa los atributos de la clase.
+     */
     public function __construct()
     {
         $this->objMenu = new Menu();
@@ -14,6 +17,11 @@ class MenuRol
         $this->mensajeoperacion = "";
     }
 
+    /**
+     * Setea los atributos de la clase MenuRol.
+     * @param Menu $objMenuS
+     * @param Rol $objRolS
+     */
     public function setear($objMenuS, $objRolS)
     {
         $this->setObjMenu($objMenuS);
@@ -47,6 +55,10 @@ class MenuRol
         $this->mensajeoperacion = $nuevomensajeoperacion;
     }
 
+    /**
+     * Carga los datos de un menú-rol desde la base de datos.
+     * @return boolean
+     */
     public function cargar()
     {
         $respuesta = false;
@@ -73,6 +85,10 @@ class MenuRol
         return $respuesta;
     }
 
+    /**
+     * Inserta un nuevo menú-rol en la base de datos.
+     * @return boolean
+     */
     public function insertar()
     {
         $resp = false;
@@ -92,30 +108,10 @@ class MenuRol
         return $resp;
     }
 
-    //En funcion modificar de la clase MenuRol: no se debería poder modificar ninguno
-    //de los dos atributos, no? ya que ambos atributos forman parte de la clave primaria
-    /*
-        public function modificar() {
-            $respuesta = false;
-            $base = new BaseDatos();
-            $sql = "UPDATE usuariorol 
-            SET tipo = '" . $this -> getTipo() . 
-            "', descripcion = '" . $this -> getDescripcion() . 
-            "', contacto = '" . $this -> getContacto() . 
-            "' WHERE numReclamo = " . $this -> getNumReclamo();
-            if ($base -> Iniciar()){
-                if ($base -> Ejecutar($sql)){
-                    $respuesta = true;
-                } else {
-                    $this -> setmensajeoperacion("usuariorol->modificar: " . $base -> getError());
-                }
-            } else {
-                $this -> setmensajeoperacion("usuariorol->modificar: " . $base -> getError());
-            }
-            return $respuesta;
-        }
-        */
-
+    /**
+     * Elimina un menú-rol de la base de datos.
+     * @return boolean
+     */
     public function eliminar()
     {
         $respuesta = false;
@@ -133,6 +129,11 @@ class MenuRol
         return $respuesta;
     }
 
+    /**
+     * Lista los menú-rol de la base de datos que cumplen con el parámetro dado.
+     * @param string $parametro
+     * @return array
+     */
     public function listar($parametro = "")
     {
         $arreglo = array();

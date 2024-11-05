@@ -1,7 +1,6 @@
 <?php
 class BaseDatos extends PDO
 {
-
     private $engine;
     private $host;
     private $database;
@@ -14,6 +13,10 @@ class BaseDatos extends PDO
     private $error;
     private $sql;
 
+    /**
+     * Constructor de la clase BaseDatos.
+     * Inicializa los parámetros de conexión y establece la conexión con la base de datos.
+     */
     public function __construct()
     {
         $this->engine = "mysql";
@@ -37,7 +40,7 @@ class BaseDatos extends PDO
     }
 
     /**
-     * Inicia la conexión con el Servidor y la  Base Datos Mysql.
+     * Inicia la conexión con el Servidor y la Base Datos Mysql.
      * Retorna true si la conexión con el servidor se pudo establecer y false en caso contrario.
      * @return boolean
      */
@@ -63,6 +66,7 @@ class BaseDatos extends PDO
 
     /**
      * Función que setea la variable instancia error.
+     * @param string $e Descripción del error.
      */
     public function setError($e)
     {
@@ -70,8 +74,8 @@ class BaseDatos extends PDO
     }
 
     /**
-     * Función que retorna una cadena con descripcion del ultimo error seteado.
-     * @return
+     * Función que retorna una cadena con descripción del último error seteado.
+     * @return string
      */
     public function getError()
     {
@@ -80,6 +84,7 @@ class BaseDatos extends PDO
 
     /**
      * Función que setea la variable instancia sql.
+     * @param string $e Consulta SQL.
      */
     public function setSQL($e)
     {
@@ -87,36 +92,43 @@ class BaseDatos extends PDO
     }
 
     /**
-     * Función que retorna una cadena con el ultimo sql seteado.
-     * @return
+     * Función que retorna una cadena con el último SQL seteado.
+     * @return string
      */
     public function getSQL()
     {
         return "\n" . $this->sql;
     }
 
+    /**
+     * Ejecuta una consulta SQL.
+     * @param string $sql Consulta SQL a ejecutar.
+     * @return mixed
+     */
     public function Ejecutar($sql)
     {
         $this->setError("");
         $this->setSQL($sql);
         if (stristr($sql, "INSERT")) {
-            // se desea INSERT ? 
-            $resp =  $this->EjecutarInsert($sql);
+            // Se desea INSERT.
+            $resp = $this->EjecutarInsert($sql);
         }
-        // se desea UPDATE o DELETE ? 
+        // Se desea UPDATE o DELETE.
         if (stristr($sql, "UPDATE") or stristr($sql, "DELETE")) {
-            $resp =  $this->EjecutarDeleteUpdate($sql);
+            $resp = $this->EjecutarDeleteUpdate($sql);
         }
-        // se desea ejecutar un SELECT ?
+        // Se desea ejecutar un SELECT.
         if (stristr($sql, "SELECT")) {
-            $resp =  $this->EjecutarSelect($sql);
+            $resp = $this->EjecutarSelect($sql);
         }
         return $resp;
     }
 
     /**
-     *Si se inserta en una tabla que tiene una columna autoincrement se retorna el id con el que se inserto el registro.
-     *caso contrario se retorna -1
+     * Si se inserta en una tabla que tiene una columna autoincrement, se retorna el id con el que se insertó el registro.
+     * Caso contrario, se retorna -1.
+     * @param string $sql Consulta SQL de inserción.
+     * @return int
      */
     private function EjecutarInsert($sql)
     {
@@ -125,7 +137,7 @@ class BaseDatos extends PDO
             $this->analizarDebug();
             $id = 0;
         } else {
-            $id =  $this->lastInsertId();
+            $id = $this->lastInsertId();
             if ($id == 0) {
                 $id = -1;
             }
@@ -135,7 +147,8 @@ class BaseDatos extends PDO
 
     /**
      * Devuelve la cantidad de filas afectadas por la ejecución SQL. Si el valor es <0 no se pudo realizar la operación.
-     * @return integer
+     * @param string $sql Consulta SQL de actualización o eliminación.
+     * @return int
      */
     private function EjecutarDeleteUpdate($sql)
     {
@@ -151,7 +164,8 @@ class BaseDatos extends PDO
 
     /**
      * Retorna cada uno de los registros de una consulta select.
-     * @return integer
+     * @param string $sql Consulta SQL de selección.
+     * @return int
      */
     private function EjecutarSelect($sql)
     {
@@ -170,8 +184,8 @@ class BaseDatos extends PDO
 
     /**
      * Devuelve un registro retornado por la ejecución de una consulta.
-     * el puntero se desplaza al siguiente registro de la consulta.
-     * @return array
+     * El puntero se desplaza al siguiente registro de la consulta.
+     * @return array|false
      */
     public function Registro()
     {
@@ -191,7 +205,7 @@ class BaseDatos extends PDO
     }
 
     /**
-     * Esta función si esta seteado la variable instancia $this->debug visualiza el debug.
+     * Esta función, si está seteada la variable instancia $this->debug, visualiza el debug.
      */
     private function analizarDebug()
     {

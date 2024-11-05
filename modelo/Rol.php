@@ -2,11 +2,14 @@
 
 class Rol
 {
-
     private $idrol;
     private $rodescripcion;
     private $mensajeoperacion;
 
+    /**
+     * Constructor de la clase Rol.
+     * Inicializa los atributos de la clase.
+     */
     public function __construct()
     {
         $this->idrol = null;
@@ -14,6 +17,11 @@ class Rol
         $this->mensajeoperacion = "";
     }
 
+    /**
+     * Setea los atributos de la clase Rol.
+     * @param int $idrolS
+     * @param string $rodescripcionS
+     */
     public function setear($idrolS, $rodescripcionS)
     {
         $this->setIdrol($idrolS);
@@ -47,6 +55,10 @@ class Rol
         $this->mensajeoperacion = $nuevomensajeoperacion;
     }
 
+    /**
+     * Carga los datos de un rol desde la base de datos.
+     * @return boolean
+     */
     public function cargar()
     {
         $respuesta = false;
@@ -67,6 +79,10 @@ class Rol
         return $respuesta;
     }
 
+    /**
+     * Inserta un nuevo rol en la base de datos.
+     * @return boolean
+     */
     public function insertar()
     {
         $respuesta = false;
@@ -86,6 +102,10 @@ class Rol
         return $respuesta;
     }
 
+    /**
+     * Modifica un rol existente en la base de datos.
+     * @return boolean
+     */
     public function modificar()
     {
         $respuesta = false;
@@ -105,6 +125,10 @@ class Rol
         return $respuesta;
     }
 
+    /**
+     * Elimina un rol de la base de datos.
+     * @return boolean
+     */
     public function eliminar()
     {
         $respuesta = false;
@@ -122,6 +146,11 @@ class Rol
         return $respuesta;
     }
 
+    /**
+     * Lista los roles de la base de datos que cumplen con el parámetro dado.
+     * @param string $parametro
+     * @return array
+     */
     public function listar($parametro = "")
     {
         $arreglo = array();

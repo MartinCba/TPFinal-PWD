@@ -2,7 +2,6 @@
 
 class Usuario
 {
-
     private $idusuario;
     private $usnombre;
     private $uspass;
@@ -10,6 +9,10 @@ class Usuario
     private $usdeshabilitado;
     private $mensajeoperacion;
 
+    /**
+     * Constructor de la clase Usuario.
+     * Inicializa los atributos de la clase.
+     */
     public function __construct()
     {
         $this->idusuario = null;
@@ -20,6 +23,14 @@ class Usuario
         $this->mensajeoperacion = "";
     }
 
+    /**
+     * Setea los atributos de la clase Usuario.
+     * @param int $idusuarioS
+     * @param string $usnombreS
+     * @param string $uspassS
+     * @param string $usmailS
+     * @param string|null $usdeshabilitadoS
+     */
     public function setear($idusuarioS, $usnombreS, $uspassS, $usmailS, $usdeshabilitadoS)
     {
         $this->setIdusuario($idusuarioS);
@@ -83,6 +94,10 @@ class Usuario
         $this->mensajeoperacion = $nuevomensajeoperacion;
     }
 
+    /**
+     * Carga los datos de un usuario desde la base de datos.
+     * @return boolean
+     */
     public function cargar()
     {
         $respuesta = false;
@@ -103,6 +118,10 @@ class Usuario
         return $respuesta;
     }
 
+    /**
+     * Inserta un nuevo usuario en la base de datos.
+     * @return boolean
+     */
     public function insertar()
     {
         $respuesta = false;
@@ -130,6 +149,10 @@ class Usuario
         return $respuesta;
     }
 
+    /**
+     * Modifica un usuario existente en la base de datos.
+     * @return boolean
+     */
     public function modificar()
     {
         $respuesta = false;
@@ -157,6 +180,10 @@ class Usuario
         return $respuesta;
     }
 
+    /**
+     * Cambia el estado de habilitación de un usuario.
+     * @return boolean
+     */
     public function cambiarEstado()
     {
         $respuesta = false;
@@ -174,6 +201,11 @@ class Usuario
         return $respuesta;
     }
 
+    /**
+     * Lista los usuarios de la base de datos que cumplen con el parámetro dado.
+     * @param string $parametro
+     * @return array
+     */
     public function listar($parametro = "")
     {
         $arreglo = array();
