@@ -10,8 +10,8 @@
 |        Nombre         |  Legajo  |                   Mail                    |                               GitHub                                |
 | :-------------------: | :------: | :---------------------------------------: | :-----------------------------------------------------------------: |
 | **Hernandez, Martín** | FAI-4433 | malejandro.hernandez@est.fi.uncoma.edu.ar |              [MartinCba](https://github.com/MartinCba)              |
-|  **Metzger, Germán**  | FAI-1111 |           @est.fi.uncoma.edu.ar           |          [GermanMetzger](https://github.com/GermanMetzger)          |
-| **Villegas, Martín**  | FAI-2222 |           @est.fi.uncoma.edu.ar           | [Martin-VillegasReibold](https://github.com/Martin-VillegasReibold) |
+|  **Metzger, Germán**  | FAI-3521 | german.metzger@est.fi.uncoma.edu.ar           |          [GermanMetzger](https://github.com/GermanMetzger)          |
+| **Villegas, Martín**  | FAI-3236 | martin.villegas@est.fi.uncoma.edu.ar           | [Martin-VillegasReibold](https://github.com/Martin-VillegasReibold) |
 
 ## :warning: Instrucciones de Instalación
 

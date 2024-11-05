@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Establece la tipografía de la página */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Fondo de la página */
+body {
+  background: url(../img/banner-img.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Ajuste del cuerpo de la página */
+section {
+  margin-top: 56px;
+  margin-bottom: 76px;
+  height: calc(100% - 56px -76px);
+}
+
+/* Oculta la barra de desplazamiento */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Posiciona el logo en la barra superior */
+#logoPrincipal {
+  margin-top: -5px;
+  width: 30px;
+}
+
+#desplegable1,
+#desplegable2 {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+}
+
+.dropdown-toggle::after {
+  margin-top: 10px;
+}
