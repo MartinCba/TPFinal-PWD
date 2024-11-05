@@ -151,7 +151,7 @@ ini_set('display_errors', 0);
         <nav class="navbar bg-dark bg-gradient navbar-dark fixed-top">
             <div class="container-fluid">
 
-                <a href="../paginas/inicio.php" class="navbar-brand fw-bold"><img id="logoPrincipal" src="../img/favicon.png" alt="Logo Tienda de Sillones"> Tienda de Sillones</a>
+                <a href="../paginas/inicio.php" class="navbar-brand fw-bold"><img id="logoPrincipal" src="../img/favicon.png" alt="Logo"> Coffee store</a>
 
                 <button
                     type="button"
