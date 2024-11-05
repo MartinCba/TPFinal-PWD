@@ -1,23 +1,35 @@
 <?php
 include_once("../../configuracion.php");
 $tituloPagina = "Registrarse";
+// Crea una nueva instancia de la clase Session.
 $sesionRegistro = new Session();
+
+// Recopila y procesa los datos enviados.
 $datos = data_submitted();
+
+// Verifica si la sesión es válida.
 if ($sesionRegistro->validar()) {
+    // Obtiene los roles del usuario.
     $roles = $sesionRegistro->getRol();
     if ($roles != NULL) {
         if ($roles !== null && count($roles) > 0) {
+            // Crea una nueva instancia de la clase AbmRol.
             $objRol = new AbmRol;
-            if (isset($datos["idrol"])) { // Si tengo un idrol mediante url
+            if (isset($datos["idrol"])) {
+                // Si se proporciona un idrol, busca el rol correspondiente.
                 $rolActivo = $objRol->buscar(['idrol' => $datos["idrol"]]);
-            } else { // Sino asigno por defecto el idrol con mayor jerarquía
+            } else {
+                // Si no se proporciona un idrol, asigna por defecto el idrol con mayor jerarquía.
                 $rolActivo = $objRol->buscar(['idrol' => $roles[0]->getIdrol()]);
             }
         }
     }
+    // Redirige a la página segura con el idrol activo.
     header("Location:paginaSegura.php?idrol=" . $rolActivo[0]->getIdrol());
 } else {
+    // Si la sesión no es válida, cierra la sesión.
     $sesionRegistro->cerrar();
+    // Incluye el encabezado público.
     include_once("../estructura/encabezadoPublico.php");
 }
 ?>

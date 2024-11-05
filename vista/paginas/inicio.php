@@ -1,11 +1,17 @@
 <?php
 include_once("../../configuracion.php");
 $tituloPagina = "Coffee store";
+// Crea una nueva instancia de la clase Session.
 $sesionInicial = new Session();
+
+// Verifica si la sesión es válida.
 if ($sesionInicial->validar()) {
+    // Si la sesión es válida, incluye el encabezado privado.
     include_once("../estructura/encabezadoPrivado.php");
 } else {
+    // Si la sesión no es válida, cierra la sesión.
     $sesionInicial->cerrar();
+    // Incluye el encabezado público.
     include_once("../estructura/encabezadoPublico.php");
 }
 ?>
