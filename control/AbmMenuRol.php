@@ -113,7 +113,6 @@ class AbmMenuRol
     /**
      * Permite buscar un objeto.
      * @param array $param
-     * @return boolean
      */
     public function buscar($param)
     {
@@ -128,10 +127,10 @@ class AbmMenuRol
         }
         $objMenuRol = new MenuRol();
         $arreglo = $objMenuRol->listar($where);
-        if ($arreglo === false) {
+        if (!is_array($arreglo)) {
             return [];
         }
-        return is_array($arreglo) ? $arreglo : [];
+        return $arreglo;
     }
 
     public function crearMenuRol($param)
