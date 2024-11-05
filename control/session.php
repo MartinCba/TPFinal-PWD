@@ -2,13 +2,20 @@
 
 class Session
 {
-    // Constructor que Inicia la sesión.
+    /**
+     * Constructor que inicia la sesión.
+     */
     public function __construct()
     {
         session_start();
     }
 
-    // Actualiza las variables de sesión con los valores ingresados.
+    /**
+     * Actualiza las variables de sesión con los valores ingresados.
+     * @param string $nombreUsuario
+     * @param string $psw
+     * @return boolean
+     */
     public function iniciar($nombreUsuario, $psw)
     {
         $resp = false;
@@ -31,7 +38,10 @@ class Session
         return $resp;
     }
 
-    // Valida si la sesión actual tiene usuario y psw válidos. Devuelve true o false.
+    /**
+     * Valida si la sesión actual tiene usuario y psw válidos.
+     * @return boolean
+     */
     public function validar()
     {
         $resp = false;
@@ -41,7 +51,10 @@ class Session
         return $resp;
     }
 
-    // Devuelve true o false si la sesión está activa o no. 
+    /**
+     * Devuelve true o false si la sesión está activa o no.
+     * @return boolean
+     */
     public function activa()
     {
         $resp = false;
@@ -51,7 +64,10 @@ class Session
         return $resp;
     }
 
-    // Devuelve el usuario logeado.
+    /**
+     * Devuelve el usuario logeado.
+     * @return Usuario|null
+     */
     public function getUsuario()
     {
         $objUsuario = null;
@@ -64,7 +80,10 @@ class Session
         return $objUsuario;
     }
 
-    // Devuelve el rol del usuario logeado.
+    /**
+     * Devuelve el rol del usuario logeado.
+     * @return array|null
+     */
     public function getRol()
     {
         $listaRoles = null;
@@ -80,12 +99,18 @@ class Session
         return $listaRoles;
     }
 
-    //  Cierra la sesión actual.
+    /**
+     * Cierra la sesión actual.
+     */
     public function cerrar()
     {
         session_destroy();
     }
 
+    /**
+     * Obtiene el rol activo de la sesión.
+     * @return Rol|null
+     */
     public function obtenerRolActivo()
     {
         $objAbmRol = new AbmRol();
@@ -97,6 +122,11 @@ class Session
         return $rol;
     }
 
+    /**
+     * Establece el rol activo en la sesión.
+     * @param int $idrol
+     * @return boolean
+     */
     public function establecerRolActivo($idrol)
     {
         $resp = false;
@@ -109,5 +139,6 @@ class Session
             }
             $i++;
         }
+        return $resp;
     }
 }

@@ -2,9 +2,8 @@
 
 class AbmUsuario
 {
-
     /**
-     * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto.
+     * Espera como parámetro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto.
      * @param array $param
      * @return Usuario
      */
@@ -19,7 +18,7 @@ class AbmUsuario
     }
 
     /**
-     * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto que son claves.
+     * Espera como parámetro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto que son claves.
      * @param array $param
      * @return Usuario
      */
@@ -50,6 +49,7 @@ class AbmUsuario
     /**
      * Permite crear un objeto.
      * @param array $param
+     * @return boolean
      */
     public function alta($param)
     {
@@ -100,7 +100,7 @@ class AbmUsuario
     /**
      * Permite buscar un objeto.
      * @param array $param
-     * @return boolean
+     * @return array
      */
     public function buscar($param)
     {
@@ -127,6 +127,11 @@ class AbmUsuario
         return $arreglo;
     }
 
+    /**
+     * Permite registrar un nuevo usuario.
+     * @param array $param
+     * @return string
+     */
     public function registrarse($param)
     {
         $usuarioExiste = $this->buscar(['usnombre' => $param['usnombre']]);
@@ -137,7 +142,7 @@ class AbmUsuario
                 $param['idrol'] = 3;
                 $thisRol = new AbmUsuarioRol();
                 if ($thisRol->alta($param)) {
-                    $direccion = 'Location:../paginas/login.php?error=Acaba de registrarse, debe iniciar sesion.';
+                    $direccion = 'Location:../paginas/login.php?error=Acaba de registrarse, debe iniciar sesión.';
                 } else {
                     $direccion = 'Location:../paginas/registrarse.php';
                 }
@@ -148,6 +153,11 @@ class AbmUsuario
         return $direccion;
     }
 
+    /**
+     * Permite editar el usuario actual.
+     * @param array $param
+     * @return array
+     */
     public function editarUsuarioActual($param)
     {
         $arreglo["idusuario"] = $param["idusuario"];
@@ -164,6 +174,10 @@ class AbmUsuario
         return $respuesta;
     }
 
+    /**
+     * Lista el estado de las compras del cliente actual.
+     * @return array
+     */
     public function listarCompraEstadoCliente()
     {
         $sesionActual = new Session();
@@ -171,7 +185,6 @@ class AbmUsuario
         $idUsuario = $usuario[0]->getIdusuario();
         $objAbmCompraEstado = new AbmCompraEstado();
         $listaCompraEstado = $objAbmCompraEstado->buscar(null);
-        $arreglo = array();
         $arregloSalida = array();
         foreach ($listaCompraEstado as $elemento) {
             if ($elemento->getObjCompra()->getObjUsuario()->getIdusuario() == $idUsuario) {
@@ -188,6 +201,10 @@ class AbmUsuario
         return $arregloSalida;
     }
 
+    /**
+     * Lista la información del usuario actual.
+     * @return array
+     */
     public function listarUsuarioActual()
     {
         $sesionActual = new Session();
@@ -201,6 +218,11 @@ class AbmUsuario
         return $arregloSalida;
     }
 
+    /**
+     * Crea un nuevo usuario.
+     * @param array $param
+     * @return array
+     */
     public function crearUsuario($param)
     {
         $param["usdeshabilitado"] = null;
@@ -212,6 +234,11 @@ class AbmUsuario
         return $respuesta;
     }
 
+    /**
+     * Edita un usuario existente.
+     * @param array $param
+     * @return array
+     */
     public function editarUsuarios($param)
     {
         $arreglo["idusuario"] = $param["idusuario"];
@@ -223,11 +250,15 @@ class AbmUsuario
         if ($this->modificacion($param)) {
             $respuesta["respuesta"] = "Se modificó el usuario correctamente!";
         } else {
-            $respuesta["errorMsg"] = "No se pudo realizar la modificacion";
+            $respuesta["errorMsg"] = "No se pudo realizar la modificación";
         }
         return $respuesta;
     }
 
+    /**
+     * Lista todos los usuarios.
+     * @return array
+     */
     public function listarUsuarios()
     {
         $listaUsuarios = $this->buscar(null);

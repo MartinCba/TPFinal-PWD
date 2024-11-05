@@ -2,9 +2,8 @@
 
 class AbmUsuarioRol
 {
-
     /**
-     * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto.
+     * Espera como parámetro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto.
      * @param array $param
      * @return UsuarioRol
      */
@@ -25,7 +24,7 @@ class AbmUsuarioRol
     }
 
     /**
-     * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto que son claves.
+     * Espera como parámetro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto que son claves.
      * @param array $param
      * @return UsuarioRol
      */
@@ -62,13 +61,12 @@ class AbmUsuarioRol
     /**
      * Permite crear un objeto.
      * @param array $param
+     * @return boolean
      */
     public function alta($param)
     {
         $resp = false;
-        //$param['Patente'] = null;
         $objUsuarioRol = $this->cargarObjeto($param);
-        // verEstructura($objAuto);
         if ($objUsuarioRol != null and $objUsuarioRol->insertar()) {
             $resp = true;
         }
@@ -91,7 +89,7 @@ class AbmUsuarioRol
         }
         return $resp;
     }
-    // duda sobre si se puede modificar
+
     /**
      * Permite modificar un objeto.
      * @param array $param
@@ -112,7 +110,7 @@ class AbmUsuarioRol
     /**
      * Permite buscar un objeto.
      * @param array $param
-     * @return boolean
+     * @return array
      */
     public function buscar($param)
     {
@@ -130,6 +128,11 @@ class AbmUsuarioRol
         return $arreglo;
     }
 
+    /**
+     * Crea una relación UsuarioRol.
+     * @param array $param
+     * @return array
+     */
     public function crearUsuarioRol($param)
     {
         $arreglo1["idusuario"] = $param["idusuario"];
@@ -156,6 +159,11 @@ class AbmUsuarioRol
         return $respuesta;
     }
 
+    /**
+     * Edita una relación UsuarioRol.
+     * @param array $param
+     * @return array
+     */
     public function editarUsuarioRol($param)
     {
         $objAbmRol = new AbmRol();
@@ -167,17 +175,21 @@ class AbmUsuarioRol
                 if ($this->modificacion($param)) {
                     $respuesta["respuesta"] = "Se modificó el usuario rol correctamente!";
                 } else {
-                    $respuesta["errorMsg"] = "No se pudo realizar la modificacion";
+                    $respuesta["errorMsg"] = "No se pudo realizar la modificación";
                 }
             } else {
                 $respuesta["errorMsg"] = "No existe el rol ingresado";
             }
         } elseif (count($arregloObjUsuarioRol) > 1) {
-            $respuesta["errorMsg"] = "No se puede modificar debido a que existe mas de un usuariorol con el idusuario, debe ser creado una nueva relacion usuariorol";
+            $respuesta["errorMsg"] = "No se puede modificar debido a que existe más de un usuariorol con el idusuario, debe ser creada una nueva relación usuariorol";
         }
         return $respuesta;
     }
 
+    /**
+     * Lista todas las relaciones UsuarioRol.
+     * @return array
+     */
     public function listarUsuarioRol()
     {
         $listaUsuariosRol = $this->buscar(null);
