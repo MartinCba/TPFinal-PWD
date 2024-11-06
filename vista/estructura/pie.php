@@ -6,19 +6,19 @@
     <div class="text-center text-white my-1">
         <ul class="navbar-nav d-flex flex-row justify-content-center">
             <li class="nav-item mx-1">
-                <a href="../paginas/#" class="nav-link text-white">Sobre nosotros</a>
+                <a href="../paginas/quienesSomos.php" class="nav-link text-white">Sobre nosotros</a>
             </li>
             <li class="nav-item mx-1">
                 <a href="../paginas/#" class="nav-link text-white btn disabled">|</a>
             </li>
             <li class="nav-item mx-1">
-                <a href="../paginas/#" class="nav-link text-white">Acerca Del proyecto</a>
+                <a href="../paginas/acercaDe.php" class="nav-link text-white">Acerca Del proyecto</a>
             </li>
             <li class="nav-item mx-1">
                 <a href="../paginas/#" class="nav-link text-white btn disabled">|</a>
             </li>
             <li class="nav-item mx-1">
-                <a href="../paginas/#" class="nav-link text-white">Contacto</a>
+                <a href="../paginas/contactenos.php" class="nav-link text-white">Contacto</a>
             </li>
         </ul>
     </div>

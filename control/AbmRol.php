@@ -99,7 +99,6 @@ class AbmRol
     /**
      * Permite buscar un objeto.
      * @param array $param
-     * @return boolean
      */
     public function buscar($param)
     {
