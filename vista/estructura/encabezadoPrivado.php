@@ -12,7 +12,7 @@ ini_set('display_errors', 0);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $tituloPagina ?></title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/jpg" href="../img/favicon.png" />
+    <link rel="icon" type="image/jpg" href="../img/taza.svg" />
     <!-- jQuery EasyUI v1.10.17 -->
     <link rel="stylesheet" href="../../util/jquery-easyui-1.10.17/themes/black/easyui.css">
     <link rel="stylesheet" href="../../util/jquery-easyui-1.10.17/themes/icon.css">
@@ -151,7 +151,7 @@ ini_set('display_errors', 0);
         <nav class="navbar bg-dark bg-gradient navbar-dark fixed-top">
             <div class="container-fluid">
 
-                <a href="../paginas/inicio.php" class="navbar-brand fw-bold"><img id="logoPrincipal" src="../img/favicon.png" alt="Logo"> Coffee store</a>
+                <a href="../paginas/inicio.php" class="navbar-brand fw-bold"><img id="logoPrincipal" src="../img/vaso.svg" alt="Logo"> Coffee store</a>
 
                 <button
                     type="button"

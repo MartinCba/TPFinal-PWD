@@ -17,14 +17,16 @@
     <!-- Bootstrap v5.3.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="icon" type="image/jpg" href="../img/favicon.png" />
+    <link rel="icon" type="image/jpg" href="../img/taza.svg" />
 </head>
 
 <body>
     <!-- Barra Superior INICIO -->
     <nav class="navbar bg-dark bg-gradient navbar-dark position-absolute top-0 w-100">
         <div class="container-fluid">
-            <a href="../paginas/inicio.php" class="navbar-brand fw-bold"><img id="logoPrincipal" src="../img/favicon.png" alt="Logo"> Coffee store</a>
+            <a href="../paginas/inicio.php" class="navbar-brand fw-bold">
+                <img id="logoPrincipal" src="../img/vaso.svg" alt="Logo"> Coffee store
+            </a>
 
             <button
                 type="button"

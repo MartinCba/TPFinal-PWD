@@ -7,7 +7,7 @@
 
 /* Fondo de la página */
 body {
-  background: url(../img/banner-img.jpg) no-repeat center center fixed;
+  background: url(../img/banner.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -39,3 +39,5 @@ section {
 .dropdown-toggle::after {
   margin-top: 10px;
 }
+
+

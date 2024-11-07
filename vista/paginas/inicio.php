@@ -16,8 +16,9 @@ if ($sesionInicial->validar()) {
 }
 ?>
 
-<p class="lead">Encuentra productos nacionales e importados exclusivos y al mejor precio.</p>
-<div id="carouselInicio" class="carousel slide carousel-fade carousel-dark w-50 m-auto" data-bs-ride="carousel">
+<h4 class="text-dark ">Encuentra productos nacionales e importados exclusivos y al mejor precio.</h4>
+
+<div id="carouselInicio" class="carousel slide w-50 mt-5 m-auto" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button class="active" data-bs-target="#carouselInicio" data-bs-slide-to="0"></button>
         <button data-bs-target="#carouselInicio" data-bs-slide-to="1"></button>
@@ -26,25 +27,13 @@ if ($sesionInicial->validar()) {
 
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <a href="quienesSomos.php"><img class="d-block w-100 border border-dark border-5 rounded" src="#" alt=""></a>
-            <div class="carousel-caption">
-                <h5>ffffff</h5>
-                <p>Breve descripción sobre el equipo</p>
-            </div>
+            <a href="login.php"><img class="d-block w-100  border-5 rounded" src="../img/gallery1.jpg" alt="Nosotros"></a>
         </div>
         <div class="carousel-item">
-            <a href="acercaDe.php"><img class="d-block w-100 border border-dark border-5 rounded" src="#" alt=""></a>
-            <div class="carousel-caption">
-                <h5>fffffff</h5>
-                <p>Información general sobre la página</p>
-            </div>
+            <a href="login.php"><img class="d-block w-100  border-5 rounded" src="../img/gallery2.jpg" alt="Proyecto"></a>
         </div>
         <div class="carousel-item">
-            <a href="contactenos.php"><img class="d-block w-100 border border-dark border-5 rounded" src="#" alt="Contacto"></a>
-            <div class="carousel-caption">
-                <h5>Contacto</h5>
-                <p>Estamos para ayudarlo</p>
-            </div>
+            <a href="login.php"><img class="d-block w-100  border-5 rounded" src="../img/gallery3.jpg" alt="Contacto"></a>
         </div>
     </div>
 
@@ -56,6 +45,7 @@ if ($sesionInicial->validar()) {
         <span class="carousel-control-next-icon"></span>
     </button>
 </div>
+<h4 class="mt-4"><a href="login.php" class="text-decoration-none text-dark fw-bold">Inicia sesión</a> para ver nuestro catálogo.</h4>
 
 <?php
 include_once("../estructura/pie.php");
