@@ -7,9 +7,11 @@
 
 /* Fondo de la página */
 body {
-  background: url(../img/banner.jpg) no-repeat center center fixed;
-  background-size: cover;
+  background-color:#FFFDD0;
+  
+  
 }
+
 
 /* Ajuste del cuerpo de la página */
 section {
@@ -39,5 +41,3 @@ section {
 .dropdown-toggle::after {
   margin-top: 10px;
 }
-
-

@@ -55,7 +55,7 @@
     <!-- Barra Superior FIN -->
 
     <!-- Banner de Fondo INICIO -->
-    <div class="banner-image w-100 vh-100 d-flex justify-content-center overflow-auto">
+    <div class="w-100 vh-100 d-flex justify-content-center overflow-auto" style="background-color: #FFFDD0;">
         <div class="content text-center mt-5 w-100">
 
             <!-- Contenido Principal INICIO -->
