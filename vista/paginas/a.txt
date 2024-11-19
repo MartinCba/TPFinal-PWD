@@ -1,0 +1,186 @@
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 41
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 1
+                    [pronombre:Producto:private] => Café Australiano
+                    [prodetalle:Producto:private] => Cremoso, suave y perfectamente equilibrado.
+                    [procantstock:Producto:private] => 43
+                    [proprecio:Producto:private] => 7150
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 31
+                    [cofecha:Compra:private] => 2024-11-19 20:13:10
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 12
+                            [usnombre:Usuario:private] => GermanMetzger
+                            [uspass:Usuario:private] => 81dc9bdb52d04dc20036dbd8313ed055
+                            [usmail:Usuario:private] => metzgergerman@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 2
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+    [1] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 42
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 7
+                    [pronombre:Producto:private] => Vanilla Latte
+                    [prodetalle:Producto:private] => Dulce, suave, con un toque a vainilla.
+                    [procantstock:Producto:private] => 9
+                    [proprecio:Producto:private] => 5890
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 31
+                    [cofecha:Compra:private] => 2024-11-19 20:13:10
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 12
+                            [usnombre:Usuario:private] => GermanMetzger
+                            [uspass:Usuario:private] => 81dc9bdb52d04dc20036dbd8313ed055
+                            [usmail:Usuario:private] => metzgergerman@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 3
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+    [2] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 43
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 5
+                    [pronombre:Producto:private] => Café Liqeurs
+                    [prodetalle:Producto:private] => Dulce, cremoso, con sabor a licor suave.
+                    [procantstock:Producto:private] => 71
+                    [proprecio:Producto:private] => 6820
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 31
+                    [cofecha:Compra:private] => 2024-11-19 20:13:10
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 12
+                            [usnombre:Usuario:private] => GermanMetzger
+                            [uspass:Usuario:private] => 81dc9bdb52d04dc20036dbd8313ed055
+                            [usmail:Usuario:private] => metzgergerman@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 1
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 46
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 3
+                    [pronombre:Producto:private] => Café Inglés
+                    [prodetalle:Producto:private] => Suave, equilibrado, con un toque de caramelo.
+                    [procantstock:Producto:private] => 8
+                    [proprecio:Producto:private] => 8200
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 33
+                    [cofecha:Compra:private] => 2024-11-19 20:17:25
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 13
+                            [usnombre:Usuario:private] => Manuel
+                            [uspass:Usuario:private] => 81dc9bdb52d04dc20036dbd8313ed055
+                            [usmail:Usuario:private] => metzgergerman@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 3
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+    [1] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 47
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 6
+                    [pronombre:Producto:private] => Café Viena
+                    [prodetalle:Producto:private] => Cremoso, con chocolate y una capa de nata.
+                    [procantstock:Producto:private] => 80
+                    [proprecio:Producto:private] => 6780
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 33
+                    [cofecha:Compra:private] => 2024-11-19 20:17:25
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 13
+                            [usnombre:Usuario:private] => Manuel
+                            [uspass:Usuario:private] => 81dc9bdb52d04dc20036dbd8313ed055
+                            [usmail:Usuario:private] => metzgergerman@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 1
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)

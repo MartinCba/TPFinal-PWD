@@ -80,6 +80,7 @@ class Session
         return $objUsuario;
     }
 
+
     /**
      * Devuelve el rol del usuario logeado.
      * @return array|null

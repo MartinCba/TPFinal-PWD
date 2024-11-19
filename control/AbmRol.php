@@ -143,4 +143,12 @@ class AbmRol
         }
         return $arregloSalida;
     }
+
+    public function obtenerRolPorId($idRol){
+        $rol = new Rol();
+        $rol->setIdrol($idRol);
+        if($rol->cargar()){
+            return $rol;
+        }
+    }
 }

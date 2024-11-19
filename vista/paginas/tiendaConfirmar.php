@@ -27,6 +27,7 @@ if (!$permiso3) {
     if ($datos['compra'] == "Comprar" && isset($datos['idcompra'])) {
         $objAbmCompraItem = new AbmCompraitem();
         $arregloItems = $objAbmCompraItem->buscar(['idcompra' => $datos['idcompra']]);
+        file_put_contents("a.txt", print_r($arregloItems,true), FILE_APPEND);
         if (!empty($arregloItems)) {
             echo '<h1 class="display-5 pb-3 fw-bold">Confirmar Compra</h1>';
             $totalPagar = 0;
@@ -35,9 +36,15 @@ if (!$permiso3) {
                 echo '&nbsp;&nbsp;Cantidad: ' . $item->getCicantidad() . '</div>';
                 $totalPagar += ($item->getObjProducto()->getProprecio()) * $item->getCicantidad();
             }
+            
             echo '<div class="text-center mt-5"><b>Total a pagar: </b>$' . $totalPagar . '</div>';
             echo '<form method="post" action="../accion/tienda/accionTiendaConfirmar.php" class="text-center">';
+            echo '<input type="hidden" name="listaCompleta" id="listaCompleta" value="' . htmlspecialchars($datos["listaCompleta"], ENT_QUOTES, 'UTF-8') . '">';
             echo '<input type="hidden" name="idcompra" id="idcompra" value="' . $datos['idcompra'] . '">';
+            echo '<input type="hidden" name="usNombre" id="usNombre" value="' . $datos["usNombre"] . '">';
+            echo '<input type="hidden" name="usMail" id="usMail" value="' . $datos["usMail"] . '">';
+            echo '<input type="hidden" name="listaCompra" id="ListaCompra" value="' . $datos["listaCompra"] . '">';
+            echo '<input type="hidden" name="items" id="idcompra" value="' . $arregloItems . '">';
             echo '<input type="submit" value="Comprar" class="btn btn-dark m-3"></form>';
         }
     }

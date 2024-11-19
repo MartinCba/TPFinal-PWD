@@ -35,6 +35,24 @@ class AbmCompra
         return $obj;
     }
 
+        /**
+     * Espera como parametro el idcompra y devuelve el objeto usuario
+     * @param array $param
+     * @return Compra
+     */
+    public function compraPorUsuario($idCompra)
+    {
+        if ($idCompra <> null) {
+            $obj = new Compra();
+            $obj->setIdcompra($idCompra);
+            if($obj->cargar()){
+                echo "ENTRE";
+                $objUsuario = $obj->getObjUsuario();
+                return $objUsuario;
+            }
+        }
+    }
+
     /**
      * Corrobora que dentro del arreglo asociativo están seteados los campos claves.
      * @param array $param

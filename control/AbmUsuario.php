@@ -134,6 +134,7 @@ class AbmUsuario
      */
     public function registrarse($param)
     {
+        $registro = false;
         $usuarioExiste = $this->buscar(['usnombre' => $param['usnombre']]);
         if ($usuarioExiste == []) {
             $param['usdeshabilitado'] = NULL;
@@ -143,14 +144,19 @@ class AbmUsuario
                 $thisRol = new AbmUsuarioRol();
                 if ($thisRol->alta($param)) {
                     $direccion = 'Location:../paginas/login.php?error=Acaba de registrarse, debe iniciar sesión.';
+                    $registro = true;
                 } else {
                     $direccion = 'Location:../paginas/registrarse.php';
+                    $registro = false;
                 }
             }
         } else {
             $direccion = 'Location:../paginas/login.php?error=Nombre de usuario existente, inicie sesión.';
+            $registro = false;
         }
-        return $direccion;
+        $retorno = ["direccion"=>$direccion,
+                    "registro"=>$registro ];
+        return $retorno;
     }
 
     /**
@@ -277,4 +283,22 @@ class AbmUsuario
         }
         return $arregloSalida;
     }
+
+        /**
+     * Lista todos los usuarios.
+     * @return array
+     */
+    public function cargarUsuarioConId($id)
+    {
+        $usuario = new Usuario();
+        $usuario->setIdusuario($id);
+        if($usuario->cargar()){
+            return $usuario;
+        };
+
+
+
+    }
+
+
 }

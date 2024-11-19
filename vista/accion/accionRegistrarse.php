@@ -10,8 +10,18 @@ if (isset($datos['usnombre']) && isset($datos['uspass']) && isset($datos['usmail
     $objAbmUsuario = new AbmUsuario();
 
     // Llama al método registrarse con los datos proporcionados.
-    $direccion = $objAbmUsuario->registrarse($datos);
+    $retorno = $objAbmUsuario->registrarse($datos);
+
+    // Si el registro fue exitoso, envía un correo al usuario.
+    if($retorno["registro"]){
+        //Creo la instancia para enviar un correo
+        $mail = new mail();
+    
+        //llamo la funcion que envia un mail al usuario
+        $mail->enviarMail($datos['usmail'],$datos['usnombre'],"registro",null);
+    }
+
 
     // Redirige a la dirección devuelta por el método registrarse.
-    header($direccion);
+    header($retorno["direccion"]);
 }
