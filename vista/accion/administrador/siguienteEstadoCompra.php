@@ -29,7 +29,7 @@ $mail->enviarMail($email = $objUsuario->getUsmail(), $nombre = $objUsuario->getU
 $respuesta = $objAbmCompraEstado->siguienteEstadoCompra($datos);
 
 // Devuelve la respuesta en formato JSON.
-//echo json_encode($respuesta);
+echo json_encode($respuesta);
 
 
 
