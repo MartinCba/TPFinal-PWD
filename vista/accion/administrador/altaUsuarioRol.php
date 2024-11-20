@@ -27,4 +27,4 @@ $objAbmUsuarioRol = new AbmUsuarioRol();
 $respuesta = $objAbmUsuarioRol->crearUsuarioRol($datos);
 
 // Devuelve la respuesta en formato JSON.
-//echo json_encode($respuesta);
+echo json_encode($respuesta);

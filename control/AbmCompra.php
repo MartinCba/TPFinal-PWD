@@ -46,7 +46,6 @@ class AbmCompra
             $obj = new Compra();
             $obj->setIdcompra($idCompra);
             if($obj->cargar()){
-                echo "ENTRE";
                 $objUsuario = $obj->getObjUsuario();
                 return $objUsuario;
             }

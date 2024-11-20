@@ -568,7 +568,8 @@ function siguienteEstado() {
               return $(this).form("validate");
             },
             success: function (result) {
-              var result = eval("(" + result + ")");
+              console.log("Respuesta cruda del servidor:", result);
+              var result = JSON.parse(result);
               if (result.errorMsg) {
                 $.messager.show({
                   title: "Error",

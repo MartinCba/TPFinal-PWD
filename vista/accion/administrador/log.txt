@@ -1,0 +1,16 @@
+
+
+1
+{"respuesta":"Se cambi\u00f3 el estado de la compra correctamente"}
+{"respuesta":"Se cambi\u00f3 el estado de la compra correctamente"}
+{"errorMsg":"La compra ya ha sido avanzada"}
+{"errorMsg":"La compra ya ha sido avanzada"}
+{"errorMsg":"La compra ya ha sido avanzada"}
+{"errorMsg":"La compra ya ha sido avanzada"}
+Array
+(
+    [errorMsg] => La compra ya ha sido avanzada
+)
+
+{"errorMsg":"La compra ya ha sido avanzada"}
+{"errorMsg":"La compra ya ha sido avanzada"}
