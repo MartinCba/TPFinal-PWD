@@ -184,3 +184,195 @@ Array
         )
 
 )
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 10
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 6
+                    [pronombre:Producto:private] => Café Viena
+                    [prodetalle:Producto:private] => Cremoso, con chocolate y una capa de nata.
+                    [procantstock:Producto:private] => 95
+                    [proprecio:Producto:private] => 6780
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 9
+                    [cofecha:Compra:private] => 2024-11-20 23:08:23
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 6
+                            [usnombre:Usuario:private] => cliente
+                            [uspass:Usuario:private] => 698d51a19d8a121ce581499d7b701668
+                            [usmail:Usuario:private] => malejandro.hernandez@est.fi.uncoma.edu.ar
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 3
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+    [1] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 11
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 4
+                    [pronombre:Producto:private] => Café Irlandés
+                    [prodetalle:Producto:private] => Cálido, fuerte, con un toque de whisky.
+                    [procantstock:Producto:private] => 3
+                    [proprecio:Producto:private] => 8700
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 9
+                    [cofecha:Compra:private] => 2024-11-20 23:08:23
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 6
+                            [usnombre:Usuario:private] => cliente
+                            [uspass:Usuario:private] => 698d51a19d8a121ce581499d7b701668
+                            [usmail:Usuario:private] => malejandro.hernandez@est.fi.uncoma.edu.ar
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 1
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 12
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 2
+                    [pronombre:Producto:private] => Café Helado
+                    [prodetalle:Producto:private] => Refrescante, cremoso y con un toque dulce.iones
+                    [procantstock:Producto:private] => 10
+                    [proprecio:Producto:private] => 7450
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 10
+                    [cofecha:Compra:private] => 2024-11-20 23:18:22
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 6
+                            [usnombre:Usuario:private] => cliente
+                            [uspass:Usuario:private] => 698d51a19d8a121ce581499d7b701668
+                            [usmail:Usuario:private] => malejandro.hernandez@est.fi.uncoma.edu.ar
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 1
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 13
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 4
+                    [pronombre:Producto:private] => Café Irlandés
+                    [prodetalle:Producto:private] => Cálido, fuerte, con un toque de whisky.
+                    [procantstock:Producto:private] => 3
+                    [proprecio:Producto:private] => 8700
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 11
+                    [cofecha:Compra:private] => 2024-11-20 23:52:59
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 4
+                            [usnombre:Usuario:private] => martin
+                            [uspass:Usuario:private] => 202cb962ac59075b964b07152d234b70
+                            [usmail:Usuario:private] => martinalejandrohernandez1@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 3
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 14
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 4
+                    [pronombre:Producto:private] => Café Irlandés
+                    [prodetalle:Producto:private] => Cálido, fuerte, con un toque de whisky.
+                    [procantstock:Producto:private] => 10
+                    [proprecio:Producto:private] => 8700
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 12
+                    [cofecha:Compra:private] => 2024-11-20 23:59:42
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 4
+                            [usnombre:Usuario:private] => martin
+                            [uspass:Usuario:private] => 202cb962ac59075b964b07152d234b70
+                            [usmail:Usuario:private] => martinalejandrohernandez1@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 10
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)

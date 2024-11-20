@@ -61,12 +61,9 @@ if (!$permiso) {
             $producto["precio"] = $compraItem->getObjProducto()->getProprecio();
             $precioTotalProducto = $compraItem->getCicantidad() * $compraItem->getObjProducto()->getProprecio();
             echo "<td>" . $precioTotalProducto . "</td>";
-            echo "<td><a href='../accion/tienda/bajaCompraItem.php?idcompraitem=" . $compraItem->getIdcompraitem() . "'>Eliminar</a></td></tr>";
+            echo "<td><a href='../accion/tienda/bajaCompraItem.php?idcompraitem=" . $compraItem->getIdcompraitem() . "' class='text-danger text-decoration-none'>Eliminar</a></td></tr>";
             $totalCompra = $totalCompra + $precioTotalProducto;
-            array_push($listaCompleta,$producto);
-            
-            
-            
+            array_push($listaCompleta, $producto);
         }
         $listaCompleta = json_encode($listaCompleta);
 

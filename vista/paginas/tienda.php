@@ -31,7 +31,7 @@ if (!$permiso) {
             echo "    <div class='card text-white bg-dark'>";
             $archivo = "../img/productos/" . $producto->getIdproducto() . ".jpg";
             if (file_exists($archivo)) {
-                echo "    <img src='../img/productos/" . $producto->getIdproducto() . ".jpg' class='card-img-top rounded-bottom' alt='articulo de tienda'>";
+                echo "    <img src='../img/productos/" . $producto->getIdproducto() . ".jpg?" . time() . "' class='card-img-top rounded-bottom' alt='articulo de tienda'>";
             } else {
                 echo "    <img src='../img/productos/0.jpg' class='card-img-top rounded-bottom' alt='articulo de tienda'>";
             }
