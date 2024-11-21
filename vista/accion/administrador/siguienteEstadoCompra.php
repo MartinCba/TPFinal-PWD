@@ -1,12 +1,7 @@
 <?php
 include_once "../../../configuracion.php";
 
-function logToFile($data) {
-    $logFile = 'log.txt'; // El archivo donde guardarás los logs
-    $currentData = file_get_contents($logFile);
-    $currentData .= $data . "\n"; // Agrega el nuevo dato
-    file_put_contents($logFile, $currentData); // Escribe en el archivo
-  }
+
 
 // Obtiene los datos enviados desde el formulario.
 $datos = data_submitted();
@@ -37,7 +32,7 @@ $respuesta = $objAbmCompraEstado->siguienteEstadoCompra($datos);
 $respuesta = json_encode($respuesta);
 // Devuelve la respuesta en formato JSON.
 echo $respuesta;
-logToFile(print_r($respuesta,true));
+
 
 
 ?>
