@@ -29,7 +29,7 @@ if ($sesionInicial->validar()) {
             </button>
         </h2>
         <div id="pregunta1" class="accordion-collapse collapse" data-bs-parent="#investigacion">
-            <div class="accordion-body text-start">
+            <div class="accordion-body text-start bg-white">
                 <p>En esta vista, se tiene acceso a información general del proyecto y la tienda. A su vez, permite acceder a la vista privada de la aplicación, a partir del ingreso de un usuario y contraseña válida.</p>
             </div>
         </div>
@@ -57,7 +57,7 @@ if ($sesionInicial->validar()) {
             </button>
         </h2>
         <div id="pregunta3" class="accordion-collapse collapse" data-bs-parent="#investigacion">
-            <div class="accordion-body text-start">
+            <div class="accordion-body text-start bg-white">
                 <ol>
                     <li>La aplicación está desarrollada sobre una arquitectura MVC (Modelo-Vista-Control) utilizando PHP como lenguaje de programación.</li>
                     <li>Tiene páginas públicas y otras restringidas, que sólo pueden ser accedidas a partir de un usuario y contraseña, para lo cual se implementa un módulo de autenticación.</li>
@@ -76,7 +76,7 @@ if ($sesionInicial->validar()) {
             </button>
         </h2>
         <div id="pregunta4" class="accordion-collapse collapse" data-bs-parent="#investigacion">
-            <div class="accordion-body text-start">
+            <div class="accordion-body text-start bg-white">
                 <ul>
                     <li>Gestionar los datos de su cuenta, como cambiar su e-mail y contraseña.</li>
                     <li>Realizar la compra de uno o más productos con stock suficiente.</li>
@@ -93,7 +93,7 @@ if ($sesionInicial->validar()) {
             </button>
         </h2>
         <div id="pregunta5" class="accordion-collapse collapse" data-bs-parent="#investigacion">
-            <div class="accordion-body text-start">
+            <div class="accordion-body text-start bg-white">
                 <ul>
                     <li>Crear nuevos productos y administrar los existentes.</li>
                     <li>Acceder a los procedimientos que permite el cambio de estado de los productos.</li>
@@ -111,7 +111,7 @@ if ($sesionInicial->validar()) {
             </button>
         </h2>
         <div id="pregunta6" class="accordion-collapse collapse" data-bs-parent="#investigacion">
-            <div class="accordion-body text-start">
+            <div class="accordion-body text-start bg-white">
                 <ul>
                     <li>Crear nuevos usuarios al sistema, asignar los roles correspondientes y actualizar la información que se requiera.</li>
                     <li>Gestionar y administrar nuevos roles e ítems del menú. Vinculando item del menú al rol según corresponda.</li>
