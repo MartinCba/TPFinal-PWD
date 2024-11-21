@@ -376,3 +376,198 @@ Array
         )
 
 )
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 15
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 1
+                    [pronombre:Producto:private] => Café Australiano
+                    [prodetalle:Producto:private] => Cremoso, suave y perfectamente equilibrado.
+                    [procantstock:Producto:private] => 60
+                    [proprecio:Producto:private] => 7150
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 13
+                    [cofecha:Compra:private] => 2024-11-21 12:39:33
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 6
+                            [usnombre:Usuario:private] => Juan
+                            [uspass:Usuario:private] => 698d51a19d8a121ce581499d7b701668
+                            [usmail:Usuario:private] => juan@coffestore.com.ar
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 1
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 16
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 1
+                    [pronombre:Producto:private] => Café Australiano
+                    [prodetalle:Producto:private] => Cremoso, suave y perfectamente equilibrado.
+                    [procantstock:Producto:private] => 60
+                    [proprecio:Producto:private] => 7150
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 14
+                    [cofecha:Compra:private] => 2024-11-21 12:44:59
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 4
+                            [usnombre:Usuario:private] => martin
+                            [uspass:Usuario:private] => 202cb962ac59075b964b07152d234b70
+                            [usmail:Usuario:private] => martinalejandrohernandez1@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 1
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 17
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 1
+                    [pronombre:Producto:private] => Café Australiano
+                    [prodetalle:Producto:private] => Cremoso, suave y perfectamente equilibrado.
+                    [procantstock:Producto:private] => 60
+                    [proprecio:Producto:private] => 7150
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 15
+                    [cofecha:Compra:private] => 2024-11-21 13:37:32
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 4
+                            [usnombre:Usuario:private] => martin
+                            [uspass:Usuario:private] => 202cb962ac59075b964b07152d234b70
+                            [usmail:Usuario:private] => martinalejandrohernandez1@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 1
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 18
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 1
+                    [pronombre:Producto:private] => Café Australiano
+                    [prodetalle:Producto:private] => Cremoso, suave y perfectamente equilibrado.
+                    [procantstock:Producto:private] => 60
+                    [proprecio:Producto:private] => 7150
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 16
+                    [cofecha:Compra:private] => 2024-11-21 13:53:38
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 4
+                            [usnombre:Usuario:private] => martin
+                            [uspass:Usuario:private] => 202cb962ac59075b964b07152d234b70
+                            [usmail:Usuario:private] => martinalejandrohernandez1@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 1
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)
+Array
+(
+    [0] => CompraItem Object
+        (
+            [idcompraitem:CompraItem:private] => 19
+            [objProducto:CompraItem:private] => Producto Object
+                (
+                    [idproducto:Producto:private] => 1
+                    [pronombre:Producto:private] => Café Australiano
+                    [prodetalle:Producto:private] => Cremoso, suave y perfectamente equilibrado.
+                    [procantstock:Producto:private] => 60
+                    [proprecio:Producto:private] => 7150
+                    [prodeshabilitado:Producto:private] => 
+                    [mensajeoperacion:Producto:private] => 
+                )
+
+            [objCompra:CompraItem:private] => Compra Object
+                (
+                    [idcompra:Compra:private] => 17
+                    [cofecha:Compra:private] => 2024-11-21 13:56:32
+                    [objUsuario:Compra:private] => Usuario Object
+                        (
+                            [idusuario:Usuario:private] => 4
+                            [usnombre:Usuario:private] => martin
+                            [uspass:Usuario:private] => 202cb962ac59075b964b07152d234b70
+                            [usmail:Usuario:private] => martinalejandrohernandez1@gmail.com
+                            [usdeshabilitado:Usuario:private] => 
+                            [mensajeoperacion:Usuario:private] => 
+                        )
+
+                    [metodo:Compra:private] => carrito
+                    [mensajeoperacion:Compra:private] => 
+                )
+
+            [cicantidad:CompraItem:private] => 5
+            [mensajeoperacion:CompraItem:private] => 
+        )
+
+)

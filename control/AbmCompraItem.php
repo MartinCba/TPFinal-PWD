@@ -184,6 +184,18 @@ class AbmCompraItem
             $productoModificado['prodeshabilitado'] = $arregloObjProducto[0]->getProdeshabilitado();
             if ($this->baja($arreglo1)) {
                 if ($objAbmProducto->modificacion($productoModificado)) {
+                    // Verificar si quedan más compra-items para la compra
+                    $compraItemsRestantes = $this->buscar(['idcompra' => $param['idcompra']]);
+                    if (count($compraItemsRestantes) == 0) {
+                        // No quedan más compra-items, actualizar el estado de la compra a "cancelada"
+                        $paramCompraEstado = [
+                            'idcompra' => $param['idcompra'],
+                            'idcompraestadotipo' => 4, // Suponiendo que 4 es el ID del estado "cancelada"
+                            'cefechaini' => date('Y-m-d H:i:s'),
+                            'cefechafin' => null
+                        ];
+                        $objAbmCompraEstado->cambiarEstado($paramCompraEstado);
+                    }
                     $respuesta["respuesta"] = "La compraItem se dio de baja correctamente y se devolvieron los artículos al stock";
                 } else {
                     $respuesta["errorMsg"] = "No se pudo dar de baja la compraItem";

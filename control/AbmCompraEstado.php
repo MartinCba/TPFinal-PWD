@@ -214,6 +214,29 @@ class AbmCompraEstado
         return $respuesta;
     }
 
+    public function cambiarEstado($param)
+    {
+        $resp = false;
+        if ($this->seteadosCamposClaves($param)) {
+            $objCompraEstado = $this->cargarObjeto($param);
+            if ($objCompraEstado != null) {
+                // Instanciar el objeto CompraEstadoTipo
+                $objCompraEstadoTipo = new CompraEstadoTipo();
+                $objCompraEstadoTipo->setIdcompraestadotipo($param['idcompraestadotipo']);
+                $objCompraEstadoTipo->cargar();
+
+                // Asignar el objeto CompraEstadoTipo al objeto CompraEstado
+                $objCompraEstado->setObjCompraEstadoTipo($objCompraEstadoTipo);
+                $objCompraEstado->setCefechaini($param['cefechaini']);
+                $objCompraEstado->setCefechafin($param['cefechafin']);
+                if ($objCompraEstado->modificar()) {
+                    $resp = true;
+                }
+            }
+        }
+        return $resp;
+    }
+
     /**
      * Cancela un estado de compra.
      * @param array $param
@@ -355,20 +378,32 @@ class AbmCompraEstado
         if ($param["idcompraestadotipo"] < 3 && $param["idcompraestadotipo"] > 0) { // verifica que el id de compraestado tipo sea "iniciada" o "aceptada"
             if (!$compraCancelada) { // verifica que la compra no haya sido cancelada
                 if (!$compraAvanzada2) { // verifica que la compra no haya sido avanzada
-                    $fechaActual = date('Y-m-d H:i:s');
-                    $param["cefechafin"] = $fechaActual;
-                    if ($this->modificacion($param)) {
-                        $param["idcompraestado"] = null;
-                        $param["idcompraestadotipo"] = $param["idcompraestadotipo"] + 1;
-                        $param["cefechaini"] = $fechaActual;
-                        $param["cefechafin"] = null;
-                        if ($this->alta($param)) {
-                            $respuesta["respuesta"] = "Se cambió el estado de la compra correctamente";
+                    // Verificar si la compra tiene productos
+                    $objAbmCompraItem = new AbmCompraItem();
+                    $compraItems = $objAbmCompraItem->buscar(['idcompra' => $param['idcompra']]);
+                    if (count($compraItems) == 0) {
+                        // No hay productos en la compra, cambiar el estado a "cancelada"
+                        $param['idcompraestadotipo'] = 4; // Suponiendo que 4 es el ID del estado "cancelada"
+                        $param['cefechaini'] = date('Y-m-d H:i:s');
+                        $param['cefechafin'] = null;
+                        $this->cambiarEstado($param);
+                        $respuesta["respuesta"] = "La compra ha sido cancelada porque no tiene productos.";
+                    } else {
+                        $fechaActual = date('Y-m-d H:i:s');
+                        $param["cefechafin"] = $fechaActual;
+                        if ($this->modificacion($param)) {
+                            $param["idcompraestado"] = null;
+                            $param["idcompraestadotipo"] = $param["idcompraestadotipo"] + 1;
+                            $param["cefechaini"] = $fechaActual;
+                            $param["cefechafin"] = null;
+                            if ($this->alta($param)) {
+                                $respuesta["respuesta"] = "Se cambió el estado de la compra correctamente";
+                            } else {
+                                $respuesta["errorMsg"] = "No se pudo cambiar el estado de la compra";
+                            }
                         } else {
                             $respuesta["errorMsg"] = "No se pudo cambiar el estado de la compra";
                         }
-                    } else {
-                        $respuesta["errorMsg"] = "No se pudo cambiar el estado de la compra";
                     }
                 } else {
                     $respuesta["errorMsg"] = "La compra ya ha sido avanzada";

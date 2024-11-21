@@ -891,16 +891,10 @@ function eliminarCompraItem() {
       "Desea eliminar el Item definitivamente?",
       function (r) {
         if (r) {
-          $("#fmCompraItem").form("load", row);
-          url = "../accion/administrador/bajaCompraItem.php";
-          $("#fmCompraItem").form("submit", {
-            url: url,
-            iframe: false,
-            onSubmit: function () {
-              return $(this).form("validate");
-            },
-            success: function (result) {
-              var result = eval("(" + result + ")");
+          $.post(
+            "../accion/administrador/bajaCompraItem.php",
+            { idcompraitem: row.idcompraitem, idcompra: row.idcompra },
+            function (result) {
               if (result.errorMsg) {
                 $.messager.show({
                   title: "Error",
@@ -911,10 +905,12 @@ function eliminarCompraItem() {
                   title: "Operacion exitosa",
                   msg: result.respuesta,
                 });
-                $("#dgCompraItem").datagrid("reload"); // Recarga los datos del menú
+                $("#dgCompraItem").datagrid("reload"); // Recarga los datos del compra-item
+                $("#dgCompraEstado").datagrid("reload"); // Recarga los datos del compra-estado
               }
             },
-          });
+            "json"
+          );
         }
       }
     );

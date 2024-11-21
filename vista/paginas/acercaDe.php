@@ -43,7 +43,7 @@ if ($sesionInicial->validar()) {
             </button>
         </h2>
         <div id="pregunta2" class="accordion-collapse collapse" data-bs-parent="#investigacion">
-            <div class="accordion-body text-start">
+            <div class="accordion-body text-start bg-white">
                 <p>Luego de concretarse el proceso de autenticación y dependiendo de el/los rol/es con el/los que cuente el usuario que ingresa al sistema, permite realizar diferentes operaciones. Los roles utilizados son: cliente, depósito y administrador.</p>
             </div>
         </div>
